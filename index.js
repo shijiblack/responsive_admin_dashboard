@@ -38,3 +38,12 @@ Oders.forEach(order => {
     tr.innerHTML = trContent;
     document.querySelector('table tbody').appendChild(tr);
 })
+
+// Add class active to sidebar tab a
+
+   const list = document.querySelectorAll("#sidebar a");
+   list.forEach( (item)=> {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+    })
+   })
