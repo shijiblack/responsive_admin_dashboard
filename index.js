@@ -41,9 +41,12 @@ Oders.forEach(order => {
 
 // Add class active to sidebar tab a
 
-   const list = document.querySelectorAll("#sidebar a");
-   list.forEach( (item)=> {
-    item.addEventListener('click', () => {
-        item.classList.toggle('active');
-    })
-   })
+const list = document.querySelectorAll("#sidebar a");
+list.forEach( (item)=> {
+ item.addEventListener('click', () => {
+         list.forEach( (item)=>{
+             item.classList.remove('active');
+         })
+     item.classList.toggle('active');
+ })
+})
